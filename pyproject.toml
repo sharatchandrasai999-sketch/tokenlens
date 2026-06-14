@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokenlens"
+version = "0.2.0"
+description = "Count tokens and see LLM cost before you spend - a token cost calculator and log analyzer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+exact = ["tiktoken>=0.7.0"]
+app = ["streamlit>=1.40.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+tokenlens = "tokenlens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

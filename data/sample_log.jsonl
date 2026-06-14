@@ -1,0 +1,10 @@
+{"id": "r01", "tag": "summarize", "model": "gpt-4o", "text": "Summarize the following quarterly earnings report in three bullet points, focusing on revenue growth, margin changes, and forward guidance for the next fiscal year.", "output_tokens": 180}
+{"id": "r02", "tag": "summarize", "model": "gpt-4o", "text": "Summarize this 40-page legal contract into a one-paragraph plain-English overview that a non-lawyer can understand, highlighting obligations and termination clauses.", "output_tokens": 220}
+{"id": "r03", "tag": "classify", "model": "gpt-4o-mini", "text": "Classify this customer message as billing, technical, or general.", "output_tokens": 3}
+{"id": "r04", "tag": "classify", "model": "gpt-4o-mini", "text": "Is this review positive or negative? 'Loved it, fast shipping.'", "output_tokens": 3}
+{"id": "r05", "tag": "classify", "model": "gpt-4o-mini", "text": "Tag the intent of: 'where is my order'.", "output_tokens": 3}
+{"id": "r06", "tag": "chat", "model": "claude-sonnet", "text": "You are a helpful assistant. The user asks a long, multi-part question about migrating a database from MySQL to Postgres including schema differences, data type mapping, downtime minimization, and rollback strategy. Provide a detailed plan.", "output_tokens": 900}
+{"id": "r07", "tag": "chat", "model": "claude-sonnet", "text": "Continue the conversation: the user now asks about connection pooling and read replicas for the migrated Postgres setup.", "output_tokens": 650}
+{"id": "r08", "tag": "extract", "model": "claude-haiku", "text": "Extract invoice number, customer, date, and total from this messy invoice text block.", "output_tokens": 60}
+{"id": "r09", "tag": "extract", "model": "claude-haiku", "text": "Pull the named entities (people, orgs, dates) from this paragraph.", "output_tokens": 80}
+{"id": "r10", "tag": "summarize", "model": "gpt-4o", "text": "Give me a TL;DR of this 10,000 word blog post about distributed systems consensus algorithms, Paxos versus Raft, and practical tradeoffs for production deployments at scale across many regions worldwide.", "output_tokens": 300}
