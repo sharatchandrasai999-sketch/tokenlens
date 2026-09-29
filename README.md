@@ -18,6 +18,9 @@ tokenlens models
 Runs with **no API key and no downloads** — it ships with a fast offline token
 estimator and plugs into the exact `tiktoken` tokenizer with one optional install.
 
+![TokenLens pricing one request across 16 models](tokenlens_demo.png)
+
+
 ---
 
 ## Why this exists
