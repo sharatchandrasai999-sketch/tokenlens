@@ -20,11 +20,7 @@ from .report import print_count, print_analysis, print_optimize
 
 
 def cmd_count(args):
-    if args.file:
-        with open(args.file, encoding="utf-8") as fh:
-            text = fh.read()
-    else:
-        text = args.text or ""
+    text = _text_from(args)
     tokens, method = count_tokens(text, method=args.method)
     prices = load_prices(args.prices)
     table = cost_table(tokens, args.output_tokens, prices)
@@ -38,11 +34,7 @@ def cmd_analyze(args):
 
 
 def cmd_optimize(args):
-    if args.file:
-        with open(args.file, encoding="utf-8") as fh:
-            text = fh.read()
-    else:
-        text = args.text or ""
+    text = _text_from(args)
     prices = load_prices(args.prices)
     o = optimize(text, task=args.task, output_tokens=args.output_tokens,
                  prices=prices, default_model=args.default_model, method=args.method)
@@ -50,10 +42,16 @@ def cmd_optimize(args):
 
 
 def _text_from(args):
+    import sys
     if getattr(args, "file", None):
         with open(args.file, encoding="utf-8") as fh:
-            return fh.read()
-    return args.text or ""
+            text = fh.read()
+    else:
+        text = args.text or ""
+    if not text.strip():
+        print("warning: empty input - nothing to analyze "
+              "(did you forget --text or --file?)", file=sys.stderr)
+    return text
 
 
 def cmd_guard(args):
