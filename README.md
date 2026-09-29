@@ -190,3 +190,25 @@ tokenlens/
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## About
+
+**TokenLens** is an open-source toolkit for seeing and controlling what LLM requests cost — before you spend. It's built and maintained by [Sharat Chandra Sai Boddu](https://github.com/sharatchandrasai999-sketch), an AI engineer with a master's in Artificial Intelligence who works on the practical side of LLMs: cost, evaluation, and the guardrails that make models shippable.
+
+- Portfolio: [sharatchandrasai999-sketch.github.io](https://sharatchandrasai999-sketch.github.io)
+- Email: sharatchandrasai999@gmail.com
+- Found a bug or have a feature in mind? Open an issue — everything gets read.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
