@@ -9,6 +9,7 @@
 from __future__ import annotations
 import argparse
 
+from . import __version__
 from .tokenizer import count_tokens
 from .pricing import load_prices, cost_table, cost
 from .analyzer import analyze
@@ -159,6 +160,8 @@ def main(argv=None):
     p = argparse.ArgumentParser(prog="tokenlens",
                                 description="Count tokens and see LLM cost before you spend.")
     p.add_argument("--prices", default=None, help="path to prices.json")
+    p.add_argument("--version", action="version",
+                   version=f"%(prog)s {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     c = sub.add_parser("count", help="count tokens + cost for a piece of text")

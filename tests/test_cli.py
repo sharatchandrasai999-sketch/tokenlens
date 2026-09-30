@@ -30,3 +30,18 @@ def test_text_from_reads_file(capsys, tmp_path):
     f.write_text("Summarize this.")
     assert _text_from(_args(file=str(f))) == "Summarize this."
     assert capsys.readouterr().err == ""
+
+
+import pytest
+
+from tokenlens import __version__
+from tokenlens.cli import main
+
+
+def test_version_flag(capsys):
+    with pytest.raises(SystemExit) as exc:
+        main(["--version"])
+    assert exc.value.code == 0
+    out = capsys.readouterr().out
+    assert "tokenlens" in out
+    assert __version__ in out
