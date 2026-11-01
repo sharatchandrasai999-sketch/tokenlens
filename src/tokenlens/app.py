@@ -7,12 +7,13 @@ Tab 2: analyze a request log (uses the bundled sample by default).
 """
 
 import os
+
 import streamlit as st
 
-from tokenlens.tokenizer import count_tokens
-from tokenlens.pricing import load_prices, cost_table
 from tokenlens.analyzer import analyze
 from tokenlens.optimizer import optimize
+from tokenlens.pricing import cost_table, load_prices
+from tokenlens.tokenizer import count_tokens
 
 st.set_page_config(page_title="TokenLens", page_icon="🔎", layout="centered")
 st.title("🔎 TokenLens")
@@ -37,7 +38,7 @@ with tab_count:
                               " (tiktoken not installed - `pip install tiktoken` to enable)"))
     try:
         tokens, used = count_tokens(text, method=method)
-    except Exception:
+    except Exception:  # noqa: BLE001 - any tokenizer failure falls back to the offline estimate
         tokens, used = count_tokens(text, method="approx")
         st.warning("tiktoken isn't available here - used the offline estimate instead.")
     c1, c2 = st.columns(2)

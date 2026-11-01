@@ -18,11 +18,11 @@ guard/optimize/cache logic around it is identical.
 
 from __future__ import annotations
 
-from .tokenizer import count_tokens
-from .pricing import cost
-from .optimizer import trim_prompt, route, recommend_output_cap
-from .budget import check_budget, SpendLedger, BLOCK
+from .budget import BLOCK, SpendLedger, check_budget
 from .cache import SemanticCache
+from .optimizer import recommend_output_cap, route, trim_prompt
+from .pricing import cost
+from .tokenizer import count_tokens
 
 
 # --------------------------------------------------------------------------

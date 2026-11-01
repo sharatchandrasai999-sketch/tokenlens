@@ -13,11 +13,12 @@ requests - the view that answers "what is actually driving my bill?"
 """
 
 from __future__ import annotations
+
 import json
 from collections import defaultdict
 
-from .tokenizer import count_tokens
 from .pricing import cost
+from .tokenizer import count_tokens
 
 
 def _entry_tokens(entry: dict, method: str) -> tuple[int, int]:

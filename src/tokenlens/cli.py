@@ -7,17 +7,18 @@
 """
 
 from __future__ import annotations
+
 import argparse
 
 from . import __version__
-from .tokenizer import count_tokens
-from .pricing import load_prices, cost_table, cost
 from .analyzer import analyze
-from .optimizer import optimize
-from .budget import check_budget, SpendLedger
+from .budget import SpendLedger, check_budget
 from .linter import lint, worst_severity
-from .pipeline import Pipeline, mock_call, make_anthropic_call
-from .report import print_count, print_analysis, print_optimize
+from .optimizer import optimize
+from .pipeline import Pipeline, make_anthropic_call, mock_call
+from .pricing import cost, cost_table, load_prices
+from .report import print_analysis, print_count, print_optimize
+from .tokenizer import count_tokens
 
 
 def cmd_count(args):
@@ -102,6 +103,7 @@ def _make_caller(provider):
 
 def cmd_complete(args):
     import os
+
     from .cache import SemanticCache
     text = _text_from(args)
     prices = load_prices(args.prices)
@@ -128,7 +130,8 @@ def cmd_replay(args):
     prices = load_prices(args.prices)
     pipe = Pipeline(prices, default_model=args.default_model,
                     call_model=_make_caller(args.provider))
-    entries = [json.loads(l) for l in open(args.log, encoding="utf-8") if l.strip()]
+    with open(args.log, encoding="utf-8") as fh:
+        entries = [json.loads(l) for l in fh if l.strip()]
     print(f"\n  replaying {len(entries)} requests x {args.passes} pass(es) "
           f"through guard -> optimize -> cache -> {args.provider}")
     print("  " + "-" * 52)

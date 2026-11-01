@@ -19,8 +19,9 @@ with data instead of hope.
 """
 
 from __future__ import annotations
-import math
+
 import hashlib
+import math
 
 
 # --------------------------------------------------------------------------

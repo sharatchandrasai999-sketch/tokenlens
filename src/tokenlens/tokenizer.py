@@ -15,6 +15,7 @@ so treat counts as a close estimate for cost planning, not a billing guarantee.
 """
 
 from __future__ import annotations
+
 import re
 
 _WORD_RE = re.compile(r"\S+")

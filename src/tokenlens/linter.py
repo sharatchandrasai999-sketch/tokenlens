@@ -7,10 +7,11 @@ pre-send check or a CI gate (high-severity findings -> non-zero exit).
 """
 
 from __future__ import annotations
+
 import re
 
+from .optimizer import _FILLER, recommend_output_cap, route
 from .tokenizer import count_tokens
-from .optimizer import route, recommend_output_cap, _FILLER
 
 HIGH, MED, LOW = "high", "med", "low"
 

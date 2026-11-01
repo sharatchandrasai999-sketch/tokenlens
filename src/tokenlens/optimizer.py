@@ -16,10 +16,11 @@ Levers:
 """
 
 from __future__ import annotations
+
 import re
 
-from .tokenizer import count_tokens
 from .pricing import cost
+from .tokenizer import count_tokens
 
 # Safe, meaning-preserving filler phrases to drop.
 _FILLER = [

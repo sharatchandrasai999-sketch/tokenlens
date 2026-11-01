@@ -33,12 +33,13 @@ you want exact output-token accounting.
 """
 
 from __future__ import annotations
+
 import inspect
 from functools import wraps
 
-from .tokenizer import count_tokens
-from .pricing import load_prices
 from .pipeline import Pipeline
+from .pricing import load_prices
+from .tokenizer import count_tokens
 
 
 class BudgetExceeded(Exception):

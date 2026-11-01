@@ -13,8 +13,9 @@ says BLOCK - the caller decides whether to honor it.
 """
 
 from __future__ import annotations
-import os
+
 import json
+import os
 from datetime import date
 
 OK, WARN, BLOCK = "OK", "WARN", "BLOCK"

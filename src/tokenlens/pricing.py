@@ -6,8 +6,9 @@ providers quote.
 """
 
 from __future__ import annotations
-import os
+
 import json
+import os
 
 DEFAULT_PRICES_PATH = os.environ.get(
     "TOKENLENS_PRICES",
