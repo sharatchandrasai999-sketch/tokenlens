@@ -2,6 +2,9 @@
 
 ## Unreleased (2026-11-01)
 
+- Fixed pip installs: `prices.json` now ships inside the package, so `tokenlens count` works outside the checkout (previously it failed with a missing prices.json after a plain pip install).
+- Added a trusted-publishing workflow (`.github/workflows/publish.yml`) for PyPI — no API token stored in the repo.
+
 - Distribution renamed to `tokenlens-cli` on PyPI, because `tokenlens` is already taken there by an unrelated SDK (tokenlens.co). The CLI command stays `tokenlens`, the Python import stays `tokenlens`, and the version stays 0.2.0.
 
 - Added CONTRIBUTING.md and a bug-report template.

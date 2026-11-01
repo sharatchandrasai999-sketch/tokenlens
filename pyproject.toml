@@ -19,5 +19,8 @@ dev = ["pytest>=8.0"]
 [project.scripts]
 tokenlens = "tokenlens.cli:main"
 
+[tool.setuptools.package-data]
+tokenlens = ["prices.json"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
