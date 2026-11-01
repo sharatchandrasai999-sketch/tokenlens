@@ -22,3 +22,16 @@ def test_cost_table_sorted_cheapest_first():
     table = cost_table(1_000_000, 0, PRICES)
     assert table[0]["model"] == "cheap"
     assert table[-1]["model"] == "dear"
+
+
+def test_default_prices_load_and_bundled_copy_exists():
+    # The copy shipped inside the package is what a pip install uses: it
+    # must sit next to pricing.py, not only at the repo root.
+    from pathlib import Path
+
+    from tokenlens import pricing
+    from tokenlens.pricing import load_prices
+
+    assert (Path(pricing.__file__).parent / "prices.json").is_file()
+    prices = load_prices()
+    assert prices and all("input" in v and "output" in v for v in prices.values())
