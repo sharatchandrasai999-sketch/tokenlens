@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tokenlens"
+name = "tokenlens-cli"
 version = "0.2.0"
 description = "Count tokens and see LLM cost before you spend - a token cost calculator and log analyzer."
 readme = "README.md"

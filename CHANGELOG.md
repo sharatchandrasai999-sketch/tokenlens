@@ -2,6 +2,8 @@
 
 ## Unreleased (2026-11-01)
 
+- Distribution renamed to `tokenlens-cli` on PyPI, because `tokenlens` is already taken there by an unrelated SDK (tokenlens.co). The CLI command stays `tokenlens`, the Python import stays `tokenlens`, and the version stays 0.2.0.
+
 - Added CONTRIBUTING.md and a bug-report template.
 - Added a demo video (`demo.mp4`): a real terminal run of `tokenlens count`, no API key.
 - Added a link to the live browser demo on the portfolio site.

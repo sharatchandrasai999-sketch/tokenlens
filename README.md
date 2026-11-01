@@ -77,7 +77,14 @@ makes the invisible visible in two ways:
   change. Update one file and every number updates.
 - **CLI + dashboard + tests + CI.**
 
-## Quickstart
+## Install
+
+```bash
+pip install tokenlens-cli
+tokenlens --version   # prints 0.2.0
+```
+
+From source instead:
 
 ```bash
 pip install -e ".[dev,app]"        # or: make install
@@ -169,6 +176,8 @@ tokenlens/
 ```
 
 ## Honest notes
+
+- The PyPI name is `tokenlens-cli`, not `tokenlens`: that name is already taken on PyPI by an unrelated LLM-tracking SDK (tokenlens.co). This project is not that SDK. The command is still `tokenlens` and the import is still `tokenlens`, so do not install this alongside that SDK — both use the same import name.
 
 - The offline estimator is an **approximation** (a character-and-word blend
   calibrated to typical English; expect roughly ±15% vs exact BPE). For real
