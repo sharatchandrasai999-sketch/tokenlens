@@ -20,6 +20,14 @@ estimator and plugs into the exact `tiktoken` tokenizer with one optional instal
 
 ![TokenLens pricing one request across 16 models](tokenlens_demo.png)
 
+## Demo
+
+A real terminal run, no API key — the exact command at the top of this page:
+
+![TokenLens demo video](demo.mp4)
+
+Or try it live in your browser, no install: [portfolio demos](https://sharatchandrasai999-sketch.github.io/#demos)
+
 
 ---
 
