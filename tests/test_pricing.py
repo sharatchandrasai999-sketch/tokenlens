@@ -1,4 +1,5 @@
 import pytest
+
 from tokenlens.pricing import cost, cost_table
 
 PRICES = {
