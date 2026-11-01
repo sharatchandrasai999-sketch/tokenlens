@@ -1,4 +1,7 @@
-import json, tempfile, os
+import json
+import os
+import tempfile
+
 from tokenlens.analyzer import analyze
 
 PRICES = {"m": {"input": 1.0, "output": 2.0}}

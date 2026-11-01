@@ -1,5 +1,6 @@
 from tokenlens.tokenizer import approx_tokens, count_tokens
 
+
 def test_empty_is_zero():
     assert approx_tokens("") == 0
 

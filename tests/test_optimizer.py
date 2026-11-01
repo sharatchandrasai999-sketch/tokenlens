@@ -1,4 +1,4 @@
-from tokenlens.optimizer import trim_prompt, route, recommend_output_cap, optimize
+from tokenlens.optimizer import optimize, recommend_output_cap, route, trim_prompt
 
 PRICES = {
     "cheap": {"input": 0.15, "output": 0.60},

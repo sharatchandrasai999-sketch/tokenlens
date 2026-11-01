@@ -1,5 +1,5 @@
-from tokenlens.pipeline import Pipeline
 from tokenlens.cache import SemanticCache
+from tokenlens.pipeline import Pipeline
 
 PRICES = {
     "gpt-4o-mini": {"input": 0.15, "output": 0.60},

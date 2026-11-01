@@ -33,9 +33,9 @@ def test_text_from_reads_file(capsys, tmp_path):
 
 
 import pytest
+from tokenlens.cli import main
 
 from tokenlens import __version__
-from tokenlens.cli import main
 
 
 def test_version_flag(capsys):

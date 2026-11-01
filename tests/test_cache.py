@@ -1,9 +1,10 @@
 from tokenlens.cache import SemanticCache, evaluate_threshold
 
+
 def test_exact_repeat_is_a_hit():
     c = SemanticCache(threshold=0.9)
     c.put("what is the capital of france", "Paris")
-    hit, resp, sim = c.get("what is the capital of france")
+    hit, resp, _ = c.get("what is the capital of france")
     assert hit and resp == "Paris"
 
 def test_unrelated_is_a_miss():
